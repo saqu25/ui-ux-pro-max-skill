@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian — Study Abroad, Guided End-to-End</title>
+<meta name="description" content="Meridian guides students from India, the Caucasus and Central Asia into universities across Bulgaria, Romania, Poland, Germany, the UK and Ireland — from first application to visa day.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%237C3AED'/%3E%3Cellipse cx='16' cy='16' rx='14' ry='5.5' fill='none' stroke='white' stroke-width='1.2' opacity='.8'/%3E%3Cellipse cx='16' cy='16' rx='5.5' ry='14' fill='none' stroke='white' stroke-width='1.2' opacity='.8'/%3E%3C/svg%3E">
+<style>
+  @font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:300;font-display:swap;src:url('assets/fonts/be-vietnam-pro-300.woff2') format('woff2');}
+  @font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/be-vietnam-pro-400.woff2') format('woff2');}
+  @font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/be-vietnam-pro-500.woff2') format('woff2');}
+  @font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/be-vietnam-pro-600.woff2') format('woff2');}
+  @font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/be-vietnam-pro-700.woff2') format('woff2');}
+  @font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/be-vietnam-pro-800.woff2') format('woff2');}
+  @font-face{font-family:'Noto Sans';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/noto-sans-400.woff2') format('woff2');}
+  @font-face{font-family:'Noto Sans';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/noto-sans-500.woff2') format('woff2');}
+  @font-face{font-family:'Noto Sans';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/noto-sans-600.woff2') format('woff2');}
+
+  :root{
+    --color-primary:#7C3AED;
+    --color-primary-dark:#5B21B6;
+    --color-secondary:#8B5CF6;
+    --color-accent:#059669;
+    --color-accent-light:#10B981;
+    --color-background:#FAF5FF;
+    --color-foreground:#0F172A;
+    --color-muted:#F7F3FD;
+    --color-border:#EFE7FC;
+    --color-destructive:#DC2626;
+    --color-ring:#7C3AED;
+    --color-on-primary:#FFFFFF;
+
+    --hero-bg-0:#0A0612;
+    --hero-bg-1:#150A28;
+    --hero-fg:#F5F1FC;
+    --hero-fg-muted:#C9BEDE;
+
+    --font-sans:'Be Vietnam Pro','Noto Sans',system-ui,-apple-system,sans-serif;
+
+    --space-3xs:4px; --space-2xs:8px; --space-xs:12px; --space-sm:16px;
+    --space-md:24px; --space-lg:32px; --space-xl:48px; --space-2xl:64px; --space-3xl:96px;
+
+    --radius-sm:8px; --radius-md:14px; --radius-lg:22px; --radius-full:999px;
+    --max-w:1240px;
+    --ease-out:cubic-bezier(.16,1,.3,1);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion:no-preference){ html{ scroll-behavior:smooth; } }
+  body{
+    margin:0;
+    font-family:var(--font-sans);
+    background:var(--color-background);
+    color:var(--color-foreground);
+    line-height:1.5;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  button{font:inherit;}
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+  :focus-visible{outline:2.5px solid var(--color-ring);outline-offset:2px;border-radius:4px;}
+
+  .wrap{max-width:var(--max-w);margin-inline:auto;padding-inline:var(--space-md);}
+  @media (min-width:768px){ .wrap{padding-inline:var(--space-xl);} }
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:var(--space-2xs);
+    font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  }
+  .eyebrow::before{content:"";width:18px;height:2px;background:currentColor;border-radius:2px;}
+
+  h1,h2,h3{font-weight:700;letter-spacing:-.02em;margin:0;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2xs);
+    padding:13px 24px;border-radius:var(--radius-full);font-weight:600;font-size:15px;
+    border:1.5px solid transparent;cursor:pointer;text-decoration:none;
+    min-height:44px;transition:transform 180ms var(--ease-out), background-color 180ms var(--ease-out), border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+    white-space:nowrap;
+  }
+  .btn:active{transform:translateY(1px);}
+  .btn-primary{background:var(--color-accent);color:#fff;}
+  .btn-primary:hover{background:var(--color-accent-light);box-shadow:0 8px 24px -8px rgba(5,150,105,.55);}
+  .btn-ghost-dark{background:transparent;border-color:rgba(245,241,252,.28);color:var(--hero-fg);}
+  .btn-ghost-dark:hover{border-color:rgba(245,241,252,.6);background:rgba(245,241,252,.06);}
+  .btn-outline{background:transparent;border-color:var(--color-border);color:var(--color-foreground);}
+  .btn-outline:hover{border-color:var(--color-primary);color:var(--color-primary);}
+  .icon{width:1em;height:1em;flex:none;}
+
+  /* ---------- Nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding-block:var(--space-sm);
+    background:rgba(10,6,18,.55);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(245,241,252,.08);
+    color:var(--hero-fg);
+  }
+  .brand{display:flex;align-items:center;gap:var(--space-2xs);font-weight:700;font-size:17px;text-decoration:none;color:inherit;}
+  .brand-mark{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 32% 28%, var(--color-secondary), var(--color-primary-dark));display:grid;place-items:center;flex:none;}
+  .nav-links{display:none;align-items:center;gap:var(--space-lg);list-style:none;margin:0;padding:0;font-size:14.5px;font-weight:500;}
+  .nav-links a{text-decoration:none;opacity:.85;transition:opacity 150ms var(--ease-out);}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{display:none;}
+  .nav-toggle{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:44px;height:44px;border-radius:var(--radius-sm);border:1.5px solid rgba(245,241,252,.25);
+    background:transparent;color:var(--hero-fg);cursor:pointer;
+  }
+  @media (min-width:900px){
+    .nav-links{display:flex;}
+    .nav-cta{display:inline-flex;}
+    .nav-toggle{display:none;}
+  }
+  .mobile-menu{
+    display:none;flex-direction:column;gap:var(--space-2xs);
+    background:var(--hero-bg-1);border-bottom:1px solid rgba(245,241,252,.1);
+    padding:var(--space-sm) var(--space-md) var(--space-md);
+  }
+  .mobile-menu.is-open{display:flex;}
+  .mobile-menu a{padding:var(--space-xs) 0;text-decoration:none;color:var(--hero-fg);font-weight:500;min-height:44px;display:flex;align-items:center;}
+  .mobile-menu .btn{margin-top:var(--space-2xs);}
+
+  /* ---------- Hero / Globe ---------- */
+  .hero-scroll{position:relative;height:230vh;background:var(--hero-bg-0);}
+  .hero-pin{
+    position:sticky;top:var(--nav-h,0px);height:calc(100vh - var(--nav-h,0px));overflow:hidden;
+    display:flex;flex-direction:column;justify-content:center;
+    background:
+      radial-gradient(ellipse 60% 50% at 78% 38%, rgba(139,92,246,.28), transparent 60%),
+      linear-gradient(180deg, var(--hero-bg-0), var(--hero-bg-1) 70%);
+    color:var(--hero-fg);
+  }
+  .hero-stars{position:absolute;inset:0;background-image:
+      radial-gradient(1px 1px at 12% 22%, rgba(255,255,255,.55), transparent),
+      radial-gradient(1px 1px at 28% 68%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1.5px 1.5px at 62% 18%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1px 1px at 82% 62%, rgba(255,255,255,.45), transparent),
+      radial-gradient(1px 1px at 92% 28%, rgba(255,255,255,.35), transparent),
+      radial-gradient(1.5px 1.5px at 48% 82%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1px 1px at 8% 85%, rgba(255,255,255,.4), transparent);
+    opacity:.9;pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;z-index:1;
+    display:grid;grid-template-columns:1fr;gap:var(--space-2xl);
+    max-width:var(--max-w);margin-inline:auto;padding-inline:var(--space-md);
+    width:100%;
+  }
+  @media (min-width:768px){ .hero-inner{padding-inline:var(--space-xl);} }
+  @media (min-width:1000px){
+    .hero-inner{grid-template-columns:minmax(320px,0.9fr) 1.1fr;align-items:center;}
+  }
+  .hero-copy{max-width:560px;}
+  .hero-copy .eyebrow{color:var(--color-secondary);margin-bottom:var(--space-sm);}
+  .hero-copy h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.06;color:#fff;}
+  .hero-copy p{font-size:clamp(1rem,1.6vw,1.15rem);color:var(--hero-fg-muted);margin:var(--space-md) 0 var(--space-lg);max-width:46ch;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-sm);}
+  .hero-scrollhint{
+    position:absolute;left:50%;bottom:clamp(14px,3vh,28px);transform:translateX(-50%);
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+    font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--hero-fg-muted);
+    z-index:1;
+  }
+  .hero-scrollhint .icon{width:16px;height:16px;animation:bob 1.8s ease-in-out infinite;}
+  @media (prefers-reduced-motion:reduce){ .hero-scrollhint .icon{animation:none;} }
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+
+  .globe-stage{
+    position:relative;
+    width:100%;
+    aspect-ratio:1/1;
+    max-width:640px;
+    margin-inline:auto;
+    justify-self:center;
+  }
+  .globe-glow{
+    position:absolute;inset:6%;
+    border-radius:50%;
+    background:radial-gradient(circle at 50% 50%, rgba(139,92,246,.55), rgba(124,58,237,.18) 55%, transparent 72%);
+    filter:blur(18px);
+    pointer-events:none;
+  }
+  #globe-canvas{position:relative;width:100%;height:100%;display:block;}
+  #globe-labels{position:absolute;inset:0;pointer-events:none;}
+  .pin-label{
+    position:absolute;top:0;left:0;
+    display:inline-flex;align-items:center;gap:6px;
+    transform:translate(-50%,-160%);
+    background:rgba(10,6,18,.72);
+    border:1px solid rgba(245,241,252,.16);
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+    padding:5px 10px 5px 6px;border-radius:var(--radius-full);
+    font-size:12.5px;font-weight:600;color:#fff;white-space:nowrap;
+    will-change:transform,opacity;
+  }
+  .pin-label img{width:16px;height:12px;border-radius:2px;object-fit:cover;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.25);}
+
+  /* ---------- Destinations ---------- */
+  .section{padding-block:var(--space-3xl);}
+  .section-head{max-width:640px;margin-bottom:var(--space-xl);}
+  .section-head .eyebrow{color:var(--color-primary);margin-bottom:var(--space-sm);}
+  .section-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);}
+  .section-head p{color:#4B5567;font-size:1.05rem;margin:var(--space-sm) 0 0;}
+
+  .country-grid{
+    display:grid;grid-template-columns:repeat(1,1fr);gap:var(--space-md);
+  }
+  @media (min-width:640px){ .country-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (min-width:960px){ .country-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (min-width:1200px){ .country-grid{grid-template-columns:repeat(5,1fr);} }
+
+  .country-card{
+    background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-lg);
+    padding:var(--space-lg) var(--space-md) var(--space-md);
+    display:flex;flex-direction:column;gap:var(--space-sm);
+    transition:transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out), border-color 220ms var(--ease-out);
+  }
+  .country-card:hover{transform:translateY(-4px);box-shadow:0 18px 34px -20px rgba(91,33,182,.35);border-color:#E4D6FB;}
+  .country-flag{width:52px;height:39px;border-radius:6px;overflow:hidden;box-shadow:0 0 0 1px var(--color-border);}
+  .country-flag img{width:100%;height:100%;object-fit:cover;}
+  .country-card h3{font-size:1.05rem;}
+  .country-badge{
+    align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 9px;border-radius:var(--radius-full);
+  }
+  .country-badge.dest{background:#EAF7F1;color:var(--color-accent);}
+  .country-badge.community{background:var(--color-muted);color:var(--color-primary-dark);}
+  .country-card p{margin:0;color:#4B5567;font-size:13.5px;line-height:1.55;}
+
+  /* ---------- Why us ---------- */
+  .why-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg);}
+  @media (min-width:768px){ .why-grid{grid-template-columns:repeat(3,1fr);} }
+  .why-card{padding:var(--space-lg);border-radius:var(--radius-lg);background:var(--color-muted);}
+  .why-icon{
+    width:44px;height:44px;border-radius:var(--radius-md);
+    background:#fff;color:var(--color-primary);
+    display:grid;place-items:center;margin-bottom:var(--space-sm);
+    box-shadow:0 1px 0 var(--color-border);
+  }
+  .why-card h3{font-size:1.05rem;margin-bottom:6px;}
+  .why-card p{margin:0;color:#4B5567;font-size:14.5px;}
+
+  /* ---------- CTA banner ---------- */
+  .cta-banner{
+    background:linear-gradient(135deg, var(--color-primary-dark), var(--color-primary) 60%, var(--color-secondary));
+    color:#fff;border-radius:var(--radius-lg);
+    padding:var(--space-2xl) var(--space-lg);
+    text-align:center;
+    display:flex;flex-direction:column;align-items:center;gap:var(--space-md);
+  }
+  .cta-banner h2{font-size:clamp(1.5rem,3vw,2rem);max-width:26ch;}
+  .cta-banner p{margin:0;color:rgba(255,255,255,.82);max-width:44ch;}
+  .cta-banner .btn-primary{background:#fff;color:var(--color-primary-dark);}
+  .cta-banner .btn-primary:hover{background:#F5F1FC;box-shadow:0 8px 24px -8px rgba(0,0,0,.25);}
+
+  /* ---------- Footer ---------- */
+  footer{padding-block:var(--space-xl);border-top:1px solid var(--color-border);}
+  .footer-row{display:flex;flex-wrap:wrap;gap:var(--space-md);align-items:center;justify-content:space-between;}
+  .footer-links{display:flex;gap:var(--space-lg);list-style:none;margin:0;padding:0;font-size:14px;}
+  .footer-links a{text-decoration:none;color:#4B5567;}
+  .footer-links a:hover{color:var(--color-primary);}
+  .footer-fine{color:#8A93A6;font-size:13px;margin-top:var(--space-md);}
+
+  [data-reveal]{opacity:1;}
+  @media (prefers-reduced-motion:no-preference){
+    [data-reveal]{opacity:0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"></span>
+      Meridian
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#why-us">How it works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary nav-cta" href="#contact">Book a consultation</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#destinations">Destinations</a>
+  <a href="#why-us">How it works</a>
+  <a href="#contact">Contact</a>
+  <a class="btn btn-primary" href="#contact">Book a consultation</a>
+</div>
+
+<main id="top">
+  <section class="hero-scroll" id="hero">
+    <div class="hero-pin">
+      <div class="hero-stars" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Study abroad, guided end-to-end</span>
+          <h1>Your world, one meridian away.</h1>
+          <p>We guide students from India, the Caucasus and Central Asia into universities across Europe, the UK and Ireland — from first application to visa day.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Book a free consultation</a>
+            <a class="btn btn-ghost-dark" href="#destinations">Explore destinations</a>
+          </div>
+        </div>
+        <div class="globe-stage">
+          <div class="globe-glow" aria-hidden="true"></div>
+          <canvas id="globe-canvas" role="img" aria-label="Rotating globe highlighting Bulgaria, Romania, Poland, Germany, the United Kingdom, Ireland, India, Georgia, Uzbekistan and Tajikistan"></canvas>
+          <div id="globe-labels" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="hero-scrollhint" aria-hidden="true">
+        Scroll
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="destinations">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our global network</span>
+        <h2>Ten countries. One journey.</h2>
+        <p>Where our students come from — and where they're headed next.</p>
+      </div>
+      <div class="country-grid" id="countryGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="why-us" style="padding-top:0;">
+    <div class="wrap">
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div>
+          <h3>Personal counsellors</h3>
+          <p>One dedicated advisor with you from application to arrival.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Visa expertise</h3>
+          <p>Country-specific guidance for EU, UK and Irish student visas.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9l8-5 8 5v10"/><path d="M9 19v-6h6v6"/></svg></div>
+          <h3>Verified partners</h3>
+          <p>Direct relationships with accredited universities — no middlemen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;" id="contact">
+    <div class="wrap">
+      <div class="cta-banner" data-reveal>
+        <h2>Ready to find your path?</h2>
+        <p>Tell us where you're starting from and where you'd like to study — we'll map the route.</p>
+        <a class="btn btn-primary" href="#top">Book a free consultation</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <a class="brand" href="#top" style="color:var(--color-foreground);">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Meridian
+      </a>
+      <ul class="footer-links">
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#why-us">How it works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <p class="footer-fine">© 2026 Meridian Study Abroad. Placeholder content for design review.</p>
+  </div>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/three.min.js"></script>
+<script src="assets/globe-dots.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- Shared country data (drives both the globe pins and the grid below) ---------------- */
+  var COUNTRIES = [
+    { name:"Bulgaria",    iso:"bg", lat:42.70, lon:23.32,  type:"dest",      blurb:"Budget-friendly EU degrees in medicine, IT and business." },
+    { name:"Romania",     iso:"ro", lat:44.43, lon:26.10,  type:"dest",      blurb:"Affordable, English-taught medicine and engineering programmes." },
+    { name:"Poland",      iso:"pl", lat:52.23, lon:21.01,  type:"dest",      blurb:"Buzzing student cities and strong post-study visa routes." },
+    { name:"Germany",     iso:"de", lat:52.52, lon:13.40,  type:"dest",      blurb:"Tuition-free public universities and Europe's top job market." },
+    { name:"United Kingdom", iso:"gb", lat:51.51, lon:-0.13, type:"dest",    blurb:"World-ranked universities plus a 2-year Graduate Route visa." },
+    { name:"Ireland",     iso:"ie", lat:53.35, lon:-6.26,  type:"dest",      blurb:"English-speaking EU gateway with major tech employers." },
+    { name:"India",       iso:"in", lat:28.61, lon:77.21,  type:"community", blurb:"Our largest community of ambitious students, guided end-to-end." },
+    { name:"Georgia",     iso:"ge", lat:41.72, lon:44.83,  type:"community", blurb:"A fast-growing hub of students choosing to study in Europe." },
+    { name:"Uzbekistan",  iso:"uz", lat:41.30, lon:69.24,  type:"community", blurb:"Thousands of students launching their European education journey." },
+    { name:"Tajikistan",  iso:"tj", lat:38.56, lon:68.79,  type:"community", blurb:"Personalised counselling for first-generation international students." }
+  ];
+
+  var reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var reducedMotion = reducedMotionQuery.matches;
+  reducedMotionQuery.addEventListener("change", function(e){ reducedMotion = e.matches; });
+
+  /* ---------------- Nav height (keeps the pinned hero from sitting under the sticky nav) ---------------- */
+  var navEl = document.querySelector(".nav");
+  function setNavHeightVar(){
+    document.documentElement.style.setProperty("--nav-h", navEl.getBoundingClientRect().height + "px");
+  }
+  new ResizeObserver(setNavHeightVar).observe(navEl);
+  setNavHeightVar();
+
+  /* ---------------- Nav ---------------- */
+  var navToggle = document.getElementById("navToggle");
+  var mobileMenu = document.getElementById("mobileMenu");
+  navToggle.addEventListener("click", function(){
+    var open = mobileMenu.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(open));
+  });
+  mobileMenu.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      mobileMenu.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  /* ---------------- Destination cards (built from COUNTRIES, shared with the globe) ---------------- */
+  var grid = document.getElementById("countryGrid");
+  COUNTRIES.forEach(function(c){
+    var card = document.createElement("article");
+    card.className = "country-card grid-item";
+    card.innerHTML =
+      '<div class="country-flag"><img src="assets/flags/' + c.iso + '.svg" alt="Flag of ' + c.name + '" loading="lazy" width="52" height="39"></div>' +
+      '<span class="country-badge ' + (c.type === "dest" ? "dest" : "community") + '">' + (c.type === "dest" ? "Study destination" : "Student community") + '</span>' +
+      '<h3>' + c.name + '</h3>' +
+      '<p>' + c.blurb + '</p>';
+    grid.appendChild(card);
+  });
+
+  /* ---------------- Scroll reveal (guarded by prefers-reduced-motion) ---------------- */
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+  if (!reducedMotion && window.gsap && window.ScrollTrigger) {
+    gsap.from(".country-card", {
+      opacity:0, scale:0.94, y:16, duration:0.5,
+      stagger:{ each:0.06, from:"start", grid:"auto" },
+      ease:"back.out(1.4)",
+      scrollTrigger:{ trigger:"#countryGrid", start:"top 85%" }
+    });
+    // fromTo (not from): the CSS pre-hide rule already makes the computed
+    // opacity 0 at call time, so .from() would capture 0 as its own end
+    // value too and animate nothing. Setting both ends explicitly avoids that.
+    gsap.fromTo(".cta-banner",
+      { opacity:0, y:20 },
+      { opacity:1, y:0, duration:0.6, ease:"power2.out",
+        scrollTrigger:{ trigger:".cta-banner", start:"top 88%" } }
+    );
+  } else {
+    document.querySelectorAll("[data-reveal]").forEach(function(el){ el.style.opacity = 1; });
+  }
+
+  /* ---------------- Globe ---------------- */
+  var canvas = document.getElementById("globe-canvas");
+  var labelsLayer = document.getElementById("globe-labels");
+  if (!window.THREE || !canvas) return;
+
+  var stage = canvas.closest(".globe-stage");
+  var renderer = new THREE.WebGLRenderer({ canvas:canvas, antialias:true, alpha:true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+  camera.position.set(0, 0, 6.4);
+
+  var RADIUS = 2.3;
+  var globeGroup = new THREE.Group();
+  scene.add(globeGroup);
+
+  // Solid core so the globe reads as a sphere rather than a hollow dot cloud.
+  var core = new THREE.Mesh(
+    new THREE.SphereGeometry(RADIUS * 0.995, 48, 32),
+    new THREE.MeshBasicMaterial({ color:0x120a20 })
+  );
+  globeGroup.add(core);
+
+  // Latitude/longitude wireframe for structure.
+  var grid3d = new THREE.Mesh(
+    new THREE.SphereGeometry(RADIUS * 1.001, 24, 16),
+    new THREE.MeshBasicMaterial({ color:0x8b5cf6, wireframe:true, transparent:true, opacity:0.10 })
+  );
+  globeGroup.add(grid3d);
+
+  // Soft round-dot sprite texture, drawn once on a canvas (no external image needed).
+  function makeDotTexture(hex){
+    var c = document.createElement("canvas");
+    c.width = c.height = 64;
+    var ctx = c.getContext("2d");
+    var g = ctx.createRadialGradient(32,32,0,32,32,32);
+    g.addColorStop(0, hex + "ff");
+    g.addColorStop(0.55, hex + "cc");
+    g.addColorStop(1, hex + "00");
+    ctx.fillStyle = g;
+    ctx.fillRect(0,0,64,64);
+    return new THREE.CanvasTexture(c);
+  }
+
+  function latLonToVector3(lat, lon, r){
+    var phi = (90 - lat) * (Math.PI / 180);
+    var theta = (lon + 180) * (Math.PI / 180);
+    return new THREE.Vector3(
+      -r * Math.sin(phi) * Math.cos(theta),
+       r * Math.cos(phi),
+       r * Math.sin(phi) * Math.sin(theta)
+    );
+  }
+
+  // Real landmass dot-matrix, generated offline from Natural Earth 110m land polygons.
+  var landDots = window.GLOBE_LAND_DOTS || [];
+  var dotPositions = new Float32Array(landDots.length * 3);
+  for (var i = 0; i < landDots.length; i++) {
+    var v = latLonToVector3(landDots[i][0], landDots[i][1], RADIUS * 1.012);
+    dotPositions[i*3] = v.x; dotPositions[i*3+1] = v.y; dotPositions[i*3+2] = v.z;
+  }
+  var dotGeo = new THREE.BufferGeometry();
+  dotGeo.setAttribute("position", new THREE.BufferAttribute(dotPositions, 3));
+  var landPoints = new THREE.Points(dotGeo, new THREE.PointsMaterial({
+    size:0.028, sizeAttenuation:true, map:makeDotTexture("#c9b8f5"),
+    transparent:true, depthWrite:false, opacity:0.85
+  }));
+  globeGroup.add(landPoints);
+
+  // Pins for the ten highlighted countries.
+  var ringTexture = (function(){
+    var c = document.createElement("canvas");
+    c.width = c.height = 128;
+    var ctx = c.getContext("2d");
+    ctx.strokeStyle = "rgba(16,185,129,0.9)";
+    ctx.lineWidth = 6;
+    ctx.beginPath(); ctx.arc(64,64,50,0,Math.PI*2); ctx.stroke();
+    return new THREE.CanvasTexture(c);
+  })();
+
+  var pins = COUNTRIES.map(function(c){
+    var pos = latLonToVector3(c.lat, c.lon, RADIUS * 1.025);
+    var group = new THREE.Group();
+    group.position.copy(pos);
+
+    var dot = new THREE.Mesh(
+      new THREE.SphereGeometry(0.05, 14, 14),
+      new THREE.MeshBasicMaterial({ color:0x10b981, transparent:true })
+    );
+    group.add(dot);
+
+    var halo = new THREE.Sprite(new THREE.SpriteMaterial({ map:ringTexture, transparent:true, depthWrite:false, opacity:0.8 }));
+    halo.scale.set(0.32, 0.32, 1);
+    group.add(halo);
+
+    globeGroup.add(group);
+
+    var el = document.createElement("div");
+    el.className = "pin-label";
+    el.innerHTML = '<img src="assets/flags/' + c.iso + '.svg" alt="" width="16" height="12">' + c.name;
+    labelsLayer.appendChild(el);
+
+    return { data:c, dotMesh:dot, haloMat:halo.material, el:el };
+  });
+
+  var dl = new THREE.DirectionalLight(0xffffff, 0.0); // unused (MeshBasicMaterial ignores lights); kept out intentionally.
+  dl.visible = false;
+
+  function resize(){
+    var w = stage.clientWidth, h = stage.clientHeight;
+    if (!w || !h) return;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  new ResizeObserver(resize).observe(stage);
+  resize();
+
+  /* Scroll-driven extra rotation on top of a slow idle spin. Uses native CSS
+     sticky for the visual pin, GSAP ScrollTrigger purely to read progress. */
+  var scrollRotation = 0;
+  if (window.ScrollTrigger && !reducedMotion) {
+    ScrollTrigger.create({
+      trigger:"#hero",
+      start:"top top",
+      end:"bottom bottom",
+      scrub:0.6,
+      onUpdate:function(self){ scrollRotation = self.progress * Math.PI * 2.4; }
+    });
+  } else {
+    // Fixed, pleasant orientation showing Europe/Asia when motion is reduced.
+    globeGroup.rotation.y = 0.45;
+  }
+
+  var camNormalized = new THREE.Vector3();
+  var tmp = new THREE.Vector3();
+  function clamp01(v){ return Math.max(0, Math.min(1, v)); }
+  function remap(v, inLo, inHi, outLo, outHi){ return outLo + (clamp01((v - inLo) / (inHi - inLo))) * (outHi - outLo); }
+
+  function updatePins(){
+    var rect = stage.getBoundingClientRect();
+    camNormalized.copy(camera.position).normalize();
+    pins.forEach(function(p){
+      p.dotMesh.getWorldPosition(tmp);
+      var facing = tmp.clone().normalize().dot(camNormalized);
+      var visibility = remap(facing, 0.05, 0.35, 0, 1);
+
+      var screen = tmp.clone().project(camera);
+      var x = (screen.x * 0.5 + 0.5) * rect.width;
+      var y = (1 - (screen.y * 0.5 + 0.5)) * rect.height;
+
+      p.el.style.transform = "translate(" + x.toFixed(1) + "px," + y.toFixed(1) + "px) translate(-50%,-160%)";
+      p.el.style.opacity = visibility.toFixed(2);
+      p.dotMesh.material.opacity = 0.25 + 0.75 * visibility;
+      p.haloMat.opacity = (0.15 + 0.65 * visibility) * (0.75 + 0.25 * Math.sin(performance.now() / 500 + p.data.lon));
+    });
+  }
+
+  var idlePhase = 0;
+  function animate(){
+    requestAnimationFrame(animate);
+    if (!reducedMotion) {
+      idlePhase += 0.0016;
+      globeGroup.rotation.y = idlePhase + scrollRotation;
+    }
+    updatePins();
+    renderer.render(scene, camera);
+  }
+  animate();
+})();
+</script>
+</body>
+</html>
