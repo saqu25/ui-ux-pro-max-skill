@@ -159,7 +159,7 @@ Each rule includes:
 - **192 Color Palettes** - Industry-specific palettes aligned 1:1 with the 192 product types
 - **74 Font Pairings** - Curated typography combinations with Google Fonts imports
 - **25 Chart Types** - Recommendations for dashboards and analytics
-- **22 Tech Stacks** - React, Next.js, Astro, Vue, Nuxt.js, Nuxt UI, Svelte, SwiftUI, React Native, Flutter, HTML+Tailwind, shadcn/ui, Jetpack Compose, Angular, Laravel, Three.js, JavaFX, WPF, WinUI 3, UWP, Avalonia, Uno Platform
+- **23 Tech Stacks** - React, Next.js, Astro, Vue, Nuxt.js, Nuxt UI, Svelte, SwiftUI, React Native, Flutter, HTML+Tailwind, shadcn/ui, Jetpack Compose, Angular, Laravel, Three.js, Remotion, JavaFX, WPF, WinUI 3, UWP, Avalonia, Uno Platform
 - **98 UX Guidelines** - Best practices, anti-patterns, and accessibility rules
 - **161 Reasoning Rules** - Industry-specific design system generation (NEW in v2.0)
 
@@ -410,7 +410,7 @@ The skill provides stack-specific guidelines for:
 | **Vue Ecosystem** | Vue, Nuxt.js, Nuxt UI |
 | **Angular** | Angular |
 | **PHP** | Laravel (Blade, Livewire, Inertia.js) |
-| **Other Web** | Svelte, Astro, Three.js |
+| **Other Web** | Svelte, Astro, Three.js, Remotion |
 | **Desktop** | JavaFX, WPF, WinUI 3, Avalonia, Uno Platform, UWP |
 | **iOS** | SwiftUI |
 | **Android** | Jetpack Compose |

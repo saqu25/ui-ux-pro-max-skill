@@ -159,7 +159,7 @@ v2.0 的旗舰特性是**设计系统生成器**——一个 AI 驱动的推理�
 - **161 套配色方案** - 与 161 种产品类型 1:1 对齐的行业专属调色板
 - **57 种字体配对** - 精选字体组合，含 Google Fonts 导入
 - **25 种图表类型** - 适用于仪表板和分析场景的推荐
-- **22 种技术栈** - React、Next.js、Astro、Vue、Nuxt.js、Nuxt UI、Svelte、SwiftUI、React Native、Flutter、HTML+Tailwind、shadcn/ui、Jetpack Compose、Angular、Laravel、Three.js、JavaFX、WPF、WinUI 3、UWP、Avalonia、Uno Platform
+- **23 种技术栈** - React、Next.js、Astro、Vue、Nuxt.js、Nuxt UI、Svelte、SwiftUI、React Native、Flutter、HTML+Tailwind、shadcn/ui、Jetpack Compose、Angular、Laravel、Three.js、Remotion、JavaFX、WPF、WinUI 3、UWP、Avalonia、Uno Platform
 - **99 条 UX 指南** - 最佳实践、反模式与无障碍规则
 - **161 条推理规则** - 行业特定的设计系统生成（v2.0 新增）
 
@@ -409,7 +409,7 @@ python3 --version
 | **Vue 生态** | Vue、Nuxt.js、Nuxt UI |
 | **Angular** | Angular |
 | **PHP** | Laravel (Blade、Livewire、Inertia.js) |
-| **其他 Web** | Svelte、Astro、Three.js |
+| **其他 Web** | Svelte、Astro、Three.js、Remotion |
 | **桌面端** | JavaFX、WPF、WinUI 3、Avalonia、Uno Platform、UWP |
 | **iOS** | SwiftUI |
 | **Android** | Jetpack Compose |

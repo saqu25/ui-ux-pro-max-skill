@@ -100,6 +100,7 @@ STACK_CONFIG = {
     "shadcn":           {"file": "stacks/shadcn.csv"},
     "jetpack-compose":  {"file": "stacks/jetpack-compose.csv"},
     "threejs":          {"file": "stacks/threejs.csv"},
+    "remotion":         {"file": "stacks/remotion.csv"},
     "angular":          {"file": "stacks/angular.csv"},
     "laravel":          {"file": "stacks/laravel.csv"},
     "javafx":           {"file": "stacks/javafx.csv"},
