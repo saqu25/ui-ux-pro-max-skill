@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Medicullum</title>
+<meta name="description" content="Medicullum is an educational consultancy guiding students into Medicine and Nursing programs at Bulgaria's public medical universities.">
+<link rel="stylesheet" href="assets/tailwind.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/phosphor/phosphor.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-paper text-ink font-body antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mt-4 flex items-center justify-between bg-paper/90 backdrop-blur-md border border-ink/10 rounded-2xl px-4 sm:px-5 py-3 shadow-sm">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#0F6B62" stroke-width="2"/>
+          <line x1="20" y1="4" x2="20" y2="36" stroke="#0F6B62" stroke-width="2"/>
+          <path d="M14 11c-3 1-3 4-1 5-2 1-2 4 0 5-2 1-1 4 2 5" stroke="#0F6B62" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <path d="M16 14c1.5 1 1.5 3 0 4" stroke="#0F6B62" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+          <circle cx="27" cy="12" r="1.8" fill="#0F6B62"/>
+          <circle cx="30" cy="20" r="1.8" fill="#0F6B62"/>
+          <circle cx="27" cy="28" r="1.8" fill="#0F6B62"/>
+          <path d="M22 20h4M24 14v4M24 22v4" stroke="#0F6B62" stroke-width="1.4"/>
+        </svg>
+        <span class="font-body font-extrabold text-lg tracking-tight text-ink">MEDI<span class="font-normal text-ink/55">CULLUM</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm text-ink/70">
+        <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+        <a href="universities.html" class="hover:text-primary transition-colors">Universities</a>
+        <a href="programs.html" class="hover:text-primary transition-colors">Programs</a>
+        <a href="admission-process.html" class="hover:text-primary transition-colors">Admission Process</a>
+        <a href="about.html" class="text-primary font-semibold">About</a>
+        <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="admission-process.html#widget" class="hidden sm:inline-flex items-center gap-2 bg-ink text-paper text-sm font-semibold rounded-full px-5 py-2.5 hover:bg-primary transition-colors">
+          Get Matched <i class="ph ph-arrow-up-right"></i>
+        </a>
+        <button id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-ink/10 text-ink">
+          <i class="ph ph-list text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="hidden mobile-nav flex-col gap-1 bg-paper border border-ink/10 rounded-2xl mt-2 p-4 text-sm text-ink/80">
+      <a href="index.html" class="py-2">Home</a>
+      <a href="universities.html" class="py-2">Universities</a>
+      <a href="programs.html" class="py-2">Programs</a>
+      <a href="admission-process.html" class="py-2">Admission Process</a>
+      <a href="about.html" class="py-2 font-semibold text-primary">About</a>
+      <a href="contact.html" class="py-2">Contact</a>
+      <a href="admission-process.html#widget" class="mt-2 inline-flex items-center justify-center gap-2 bg-ink text-paper text-sm font-semibold rounded-full px-5 py-2.5">Get Matched</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="pt-40 pb-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto text-center" data-reveal>
+    <p class="text-xs tracking-[0.25em] uppercase text-primary font-semibold mb-4">About Medicullum</p>
+    <h1 class="font-display font-semibold text-4xl sm:text-5xl leading-tight">A dedicated route from application to acceptance letter.</h1>
+    <p class="mt-6 text-ink/65 max-w-2xl mx-auto leading-relaxed">Medicullum is an educational consultancy focused exclusively on Medicine and Nursing admissions in Bulgaria — because a narrower focus means deeper expertise on every deadline, exam and document.</p>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="py-16 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+    <div data-reveal>
+      <p class="text-xs tracking-[0.25em] uppercase text-primary font-semibold mb-4">Our mission</p>
+      <h2 class="font-display text-3xl sm:text-4xl leading-tight">Make a European medical education reachable — not overwhelming.</h2>
+      <p class="mt-6 text-ink/65 leading-relaxed">Applying to study Medicine or Nursing abroad involves entrance exams, legalised documents, tight deadlines and unfamiliar systems. Medicullum exists to remove that friction: one point of contact, one clear timeline, and a team that has already walked every partner university's process end to end.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-6" data-reveal-group>
+      <div class="bg-white border border-ink/10 rounded-2xl p-7">
+        <i class="ph ph-target text-2xl text-primary"></i>
+        <p class="font-display text-lg mt-4">Specialist focus</p>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Only Medicine &amp; Nursing admissions — nothing else to dilute our expertise.</p>
+      </div>
+      <div class="bg-white border border-ink/10 rounded-2xl p-7">
+        <i class="ph ph-handshake text-2xl text-primary"></i>
+        <p class="font-display text-lg mt-4">End-to-end support</p>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">From first consultation to arrival day at your chosen university.</p>
+      </div>
+      <div class="bg-white border border-ink/10 rounded-2xl p-7">
+        <i class="ph ph-wallet text-2xl text-primary"></i>
+        <p class="font-display text-lg mt-4">Flexible budget plans</p>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Tuition and fee structures explained clearly, with options that work for your family.</p>
+      </div>
+      <div class="bg-white border border-ink/10 rounded-2xl p-7">
+        <i class="ph ph-book-open-text text-2xl text-primary"></i>
+        <p class="font-display text-lg mt-4">Exam preparation</p>
+        <p class="text-sm text-ink/60 mt-2 leading-relaxed">Structured coaching for Biology, Chemistry and oral interviews.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY MEDICULLUM -->
+<section class="py-24 px-4 sm:px-6 lg:px-8 bg-ink text-paper grain relative overflow-hidden">
+  <div class="max-w-7xl mx-auto relative">
+    <div class="max-w-2xl" data-reveal>
+      <p class="text-xs tracking-[0.25em] uppercase text-accent font-semibold mb-4">Why students choose us</p>
+      <h2 class="font-display font-semibold text-3xl sm:text-4xl leading-tight">Leader in medical admissions.</h2>
+    </div>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8" data-reveal-group>
+      <div>
+        <p class="font-display text-4xl text-accent">100%</p>
+        <p class="font-semibold mt-3">Spot securing</p>
+        <p class="text-sm text-paper/55 mt-2 leading-relaxed">For eligible students who follow the guided timeline.</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl text-accent">4</p>
+        <p class="font-semibold mt-3">Partner universities</p>
+        <p class="text-sm text-paper/55 mt-2 leading-relaxed">Plovdiv, Sofia, Varna and Trakia University.</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl text-accent">2</p>
+        <p class="font-semibold mt-3">Program tracks</p>
+        <p class="text-sm text-paper/55 mt-2 leading-relaxed">Medicine (MD) and Nursing (BSc).</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl text-accent">1:1</p>
+        <p class="font-semibold mt-3">Advisor support</p>
+        <p class="text-sm text-paper/55 mt-2 leading-relaxed">A single point of contact throughout your application.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto text-center" data-reveal>
+    <h2 class="font-display text-3xl sm:text-4xl">Let's talk about your application.</h2>
+    <p class="text-ink/60 mt-4">Book a free consultation with a Medicullum advisor — no obligation.</p>
+    <a href="contact.html" class="tap-btn mt-8 inline-flex items-center gap-2 bg-ink text-paper font-semibold rounded-full px-7 py-3.5 hover:bg-primary">Book a consultation <i class="ph ph-arrow-right"></i></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-paper/80 mt-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-2">
+        <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="#F3F1E7" stroke-width="2"/>
+          <line x1="20" y1="4" x2="20" y2="36" stroke="#F3F1E7" stroke-width="2"/>
+          <path d="M14 11c-3 1-3 4-1 5-2 1-2 4 0 5-2 1-1 4 2 5" stroke="#F3F1E7" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <circle cx="27" cy="12" r="1.8" fill="#F3F1E7"/>
+          <circle cx="30" cy="20" r="1.8" fill="#F3F1E7"/>
+          <circle cx="27" cy="28" r="1.8" fill="#F3F1E7"/>
+        </svg>
+        <span class="font-extrabold text-lg text-paper">MEDI<span class="font-normal text-paper/55">CULLUM</span></span>
+      </div>
+      <p class="text-sm text-paper/55 mt-5 max-w-sm leading-relaxed">Medicullum is an educational consultancy guiding students into Medicine and Nursing programs at Bulgaria's public medical universities — with end-to-end admissions support.</p>
+      <div class="flex items-center gap-4 mt-6 text-sm">
+        <a href="tel:+359876975945" class="hover:text-accent transition-colors"><i class="ph ph-phone mr-1"></i> +359 876 975 945</a>
+      </div>
+      <div class="flex items-center gap-4 mt-2 text-sm">
+        <a href="tel:+447384052534" class="hover:text-accent transition-colors"><i class="ph ph-phone mr-1"></i> +44 7384 052534</a>
+      </div>
+    </div>
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-paper/40 mb-4">Explore</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="universities.html" class="hover:text-accent transition-colors">Universities</a></li>
+        <li><a href="programs.html" class="hover:text-accent transition-colors">Programs</a></li>
+        <li><a href="admission-process.html" class="hover:text-accent transition-colors">Admission Process</a></li>
+        <li><a href="about.html" class="hover:text-accent transition-colors">About Medicullum</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs tracking-[0.2em] uppercase text-paper/40 mb-4">Programs</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="programs.html#medicine" class="hover:text-accent transition-colors">Medicine (MD)</a></li>
+        <li><a href="programs.html#nursing" class="hover:text-accent transition-colors">Nursing (BSc)</a></li>
+        <li><a href="contact.html" class="hover:text-accent transition-colors">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-paper/10 py-6 text-center text-xs text-paper/40 px-4">© 2026 Medicullum. Independent educational consultancy — not affiliated with the universities listed.</div>
+</footer>
+
+<script src="assets/vendor/gsap/gsap.min.js"></script>
+<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
