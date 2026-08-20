@@ -64,6 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+
+    // Web fonts (Playfair Display / Inter) load after this script runs and
+    // reflow the page, which shifts every trigger's computed start position.
+    // Re-measure once fonts and any remaining resources have settled so
+    // below-the-fold sections don't end up permanently stuck at opacity: 0.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => ScrollTrigger.refresh());
+    }
+    window.addEventListener('load', () => ScrollTrigger.refresh());
   } else {
     // No-motion / reduced-motion fallback: just fill in counters immediately
     document.querySelectorAll('[data-counter]').forEach((el) => {
