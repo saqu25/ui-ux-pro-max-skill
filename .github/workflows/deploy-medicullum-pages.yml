@@ -1,0 +1,48 @@
+name: Deploy Medicullum preview to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "projects/medicullum/**"
+      - ".github/workflows/deploy-medicullum-pages.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Rewrite absolute asset/nav paths for the Pages base path
+        run: |
+          set -euo pipefail
+          repo_name="${GITHUB_REPOSITORY#*/}"
+          grep -rl '"/projects/medicullum/' projects/medicullum --include='*.html' | while read -r file; do
+            sed -i "s#\"/projects/medicullum/#\"/${repo_name}/projects/medicullum/#g" "$file"
+          done
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
