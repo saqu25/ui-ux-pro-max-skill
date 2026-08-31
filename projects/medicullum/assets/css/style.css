@@ -11,8 +11,8 @@
   --navy-700: #16336a;
   --gold: #c9a227;
   --gold-light: #e6c65c;
-  --white: #ffffff;
-  --soft-gray: #f5f6f8;
+  --white: #fcf5e7;
+  --soft-gray: #f7f2e6;
   --ink: #17213b;
   --muted: #5b6478;
   --border: #e4e7ee;
@@ -58,7 +58,7 @@ body {
   background: rgba(10, 31, 68, 0.72);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(252, 245, 231, 0.08);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -69,7 +69,7 @@ body {
 
 .nav-link {
   position: relative;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(252, 245, 231, 0.82);
   transition: color 0.2s ease;
 }
 
@@ -128,14 +128,14 @@ body {
 }
 
 .btn-outline-light {
-  border: 1.5px solid rgba(255, 255, 255, 0.55);
-  color: #fff;
-  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(252, 245, 231, 0.55);
+  color: #fcf5e7;
+  background: rgba(252, 245, 231, 0.04);
 }
 
 .btn-outline-light:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: #fff;
+  background: rgba(252, 245, 231, 0.14);
+  border-color: #fcf5e7;
 }
 
 .btn-outline-navy {
@@ -146,12 +146,12 @@ body {
 
 .btn-outline-navy:hover {
   background: var(--navy);
-  color: #fff;
+  color: #fcf5e7;
 }
 
 .btn-whatsapp {
   background: #21c063;
-  color: #fff;
+  color: #fcf5e7;
 }
 
 .btn-whatsapp:hover {
@@ -166,31 +166,31 @@ body {
 
 /* Glass */
 .glass {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(252, 245, 231, 0.65);
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(252, 245, 231, 0.5);
 }
 
 .glass-dark {
   background: rgba(10, 31, 68, 0.55);
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(252, 245, 231, 0.12);
 }
 
 /* Hero */
 .hero-gradient {
   background:
     radial-gradient(1200px 600px at 85% -10%, rgba(201, 162, 39, 0.18), transparent 60%),
-    radial-gradient(900px 500px at 0% 0%, rgba(255, 255, 255, 0.06), transparent 55%),
+    radial-gradient(900px 500px at 0% 0%, rgba(252, 245, 231, 0.06), transparent 55%),
     linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-800) 100%);
 }
 
 .hero-grid-overlay {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(252, 245, 231, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(252, 245, 231, 0.06) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent 70%);
 }
@@ -337,7 +337,7 @@ body {
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 0.85rem 1rem;
-  background: #fff;
+  background: #fcf5e7;
   color: var(--ink);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -363,18 +363,18 @@ body {
 /* Footer */
 .site-footer {
   background: var(--navy-deep);
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(252, 245, 231, 0.75);
 }
 
 .footer-heading {
-  color: #fff;
+  color: #fcf5e7;
   font-weight: 700;
   font-size: 0.95rem;
   margin-bottom: 1rem;
 }
 
 .footer-link {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(252, 245, 231, 0.65);
   transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
@@ -390,8 +390,8 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  background: rgba(252, 245, 231, 0.08);
+  color: #fcf5e7;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
