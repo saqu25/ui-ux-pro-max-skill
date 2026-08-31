@@ -85,7 +85,9 @@
     </div>
 
     <div class="bg-ink text-paper rounded-3xl p-8 sm:p-10 grain relative overflow-hidden" data-reveal>
-      <form id="enquiry-form" class="relative space-y-5" onsubmit="event.preventDefault(); document.getElementById('form-success').classList.remove('hidden'); this.reset();">
+      <form id="enquiry-form" class="relative space-y-5">
+        <!-- Honeypot: hidden from real visitors, catches simple bots -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute -left-[9999px] w-px h-px opacity-0" style="pointer-events:none;">
         <div class="grid sm:grid-cols-2 gap-5">
           <div>
             <label for="full-name" class="text-xs tracking-widest uppercase text-paper/50">Full name</label>
@@ -124,8 +126,11 @@
           <label for="message" class="text-xs tracking-widest uppercase text-paper/50">Message</label>
           <textarea id="message" name="message" rows="4" class="mt-2 w-full bg-white/5 border border-paper/20 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent placeholder:text-paper/30" placeholder="Tell us about your background and intake year..."></textarea>
         </div>
-        <button type="submit" class="tap-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-ink font-semibold rounded-full px-7 py-3.5">Send enquiry <i class="ph ph-arrow-right"></i></button>
+        <button id="submit-btn" type="submit" class="tap-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-ink font-semibold rounded-full px-7 py-3.5 disabled:opacity-60 disabled:cursor-not-allowed">
+          <span id="submit-btn-label">Send enquiry</span> <i class="ph ph-arrow-right"></i>
+        </button>
         <p id="form-success" class="hidden text-sm text-accent flex items-center gap-2 pt-2"><i class="ph ph-check-circle text-lg"></i> Thanks — a Medicullum advisor will be in touch shortly.</p>
+        <p id="form-error" class="hidden text-sm text-red-400 flex items-center gap-2 pt-2"><i class="ph ph-warning-circle text-lg"></i> Something went wrong sending your enquiry. Please call or WhatsApp us instead — see the numbers on the left.</p>
       </form>
     </div>
   </div>
@@ -177,6 +182,7 @@
 
 <script src="assets/vendor/gsap/gsap.min.js"></script>
 <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/emailjs/email.min.js"></script>
 <script src="assets/site.js"></script>
 <script>
   (function () {
@@ -193,6 +199,63 @@
       const uniFromProgram = program.split('-')[1];
       if (uniFromProgram && uniEl && [...uniEl.options].some(o => o.value === uniFromProgram)) uniEl.value = uniFromProgram;
     }
+  })();
+</script>
+<script>
+  // --- EmailJS wiring for the consultation-booking form ---
+  // Fill these in from your EmailJS dashboard (emailjs.com) after:
+  //   1. Creating a free account and connecting your Gmail as an "Email Service"
+  //   2. Creating an Email Template whose "To Email" is your Medicullum inbox,
+  //      with template variables matching the ones sent below
+  //      (from_name, from_email, phone, track, university, message)
+  //   3. Copying the Service ID, Template ID, and Public Key here:
+  const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+  const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+
+  (function () {
+    if (window.emailjs) emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+    const form = document.getElementById('enquiry-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const submitLabel = document.getElementById('submit-btn-label');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Honeypot: if this hidden field has a value, silently drop the submission
+      if (form.elements['_gotcha'] && form.elements['_gotcha'].value) return;
+
+      successMsg.classList.add('hidden');
+      errorMsg.classList.add('hidden');
+      submitBtn.disabled = true;
+      submitLabel.textContent = 'Sending…';
+
+      const templateParams = {
+        from_name: form.elements['full-name'].value,
+        from_email: form.elements['email'].value,
+        phone: form.elements['phone'].value,
+        track: form.elements['track'].value,
+        university: form.elements['university'].value,
+        message: form.elements['message'].value
+      };
+
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(function () {
+          successMsg.classList.remove('hidden');
+          form.reset();
+        })
+        .catch(function (err) {
+          console.error('EmailJS send failed:', err);
+          errorMsg.classList.remove('hidden');
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitLabel.textContent = 'Send enquiry';
+        });
+    });
   })();
 </script>
 </body>
