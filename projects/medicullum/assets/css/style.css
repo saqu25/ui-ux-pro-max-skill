@@ -1,28 +1,27 @@
 /*
   Medicullum design tokens
-  Palette: Burgundy / Espresso Brown / Amber-Gold / Ivory, with a cool
-  blue-violet undertone reserved for ambient shadows (depth, not surface color)
+  Palette: Deep Navy / White / Gold Accent / Soft Gray
   Type: Playfair Display (headings) + Inter (body)
 */
 
 :root {
-  --navy: #4a1620;
-  --navy-deep: #2a0d14;
-  --navy-800: #6b2530;
-  --navy-700: #82323f;
-  --gold: #c6952f;
-  --gold-light: #e3b563;
+  --navy: #0a1f44;
+  --navy-deep: #061530;
+  --navy-800: #102a54;
+  --navy-700: #16336a;
+  --gold: #c9a227;
+  --gold-light: #e6c65c;
   --white: #ffffff;
-  --soft-gray: #f7f2ec;
-  --ink: #2b1712;
-  --muted: #6e5c54;
-  --border: #e6dad0;
+  --soft-gray: #f5f6f8;
+  --ink: #17213b;
+  --muted: #5b6478;
+  --border: #e4e7ee;
   --success: #1f9d55;
 
-  --shadow-sm: 0 2px 8px rgba(35, 26, 58, 0.10);
-  --shadow-md: 0 10px 30px rgba(35, 26, 58, 0.16);
-  --shadow-lg: 0 20px 60px rgba(30, 22, 50, 0.24);
-  --shadow-gold: 0 10px 30px rgba(198, 149, 47, 0.28);
+  --shadow-sm: 0 2px 8px rgba(10, 31, 68, 0.06);
+  --shadow-md: 0 10px 30px rgba(10, 31, 68, 0.10);
+  --shadow-lg: 0 20px 60px rgba(10, 31, 68, 0.16);
+  --shadow-gold: 0 10px 30px rgba(201, 162, 39, 0.25);
 
   --radius-sm: 10px;
   --radius-md: 16px;
@@ -56,7 +55,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(74, 22, 32, 0.74);
+  background: rgba(10, 31, 68, 0.72);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -64,7 +63,7 @@ body {
 }
 
 .site-header.is-scrolled {
-  background: rgba(42, 13, 20, 0.92);
+  background: rgba(6, 21, 48, 0.92);
   box-shadow: var(--shadow-md);
 }
 
@@ -125,7 +124,7 @@ body {
 
 .btn-gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(198, 149, 47, 0.38);
+  box-shadow: 0 16px 40px rgba(201, 162, 39, 0.35);
 }
 
 .btn-outline-light {
@@ -174,7 +173,7 @@ body {
 }
 
 .glass-dark {
-  background: rgba(74, 22, 32, 0.58);
+  background: rgba(10, 31, 68, 0.55);
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -183,9 +182,8 @@ body {
 /* Hero */
 .hero-gradient {
   background:
-    radial-gradient(1200px 600px at 85% -10%, rgba(198, 149, 47, 0.20), transparent 60%),
-    radial-gradient(900px 550px at 4% 96%, rgba(64, 74, 128, 0.16), transparent 62%),
-    radial-gradient(900px 500px at 0% 0%, rgba(255, 255, 255, 0.05), transparent 55%),
+    radial-gradient(1200px 600px at 85% -10%, rgba(201, 162, 39, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 0% 0%, rgba(255, 255, 255, 0.06), transparent 55%),
     linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-800) 100%);
 }
 
@@ -209,7 +207,7 @@ body {
 .card:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(198, 149, 47, 0.38);
+  border-color: rgba(201, 162, 39, 0.35);
 }
 
 .badge {
@@ -225,12 +223,12 @@ body {
 }
 
 .badge-gold {
-  background: rgba(198, 149, 47, 0.14);
+  background: rgba(201, 162, 39, 0.12);
   color: #9a7c1e;
 }
 
 .badge-navy {
-  background: rgba(74, 22, 32, 0.08);
+  background: rgba(10, 31, 68, 0.08);
   color: var(--navy);
 }
 
@@ -247,7 +245,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(42, 13, 20, 0) 40%, rgba(42, 13, 20, 0.55));
+  background: linear-gradient(180deg, rgba(6, 21, 48, 0) 40%, rgba(6, 21, 48, 0.55));
 }
 
 /* Stat counters */
@@ -347,7 +345,7 @@ body {
 .field-input:focus {
   outline: none;
   border-color: var(--gold);
-  box-shadow: 0 0 0 4px rgba(198, 149, 47, 0.18);
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.15);
 }
 
 .field-input:invalid.touched {
