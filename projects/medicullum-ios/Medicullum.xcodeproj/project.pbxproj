@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B68528C63725CA9ECCB683 /* MedicullumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D74A7CC467D7D68DEF632F /* MedicullumApp.swift */; };
+		14F7A52EA7237DD2D27EAAFC /* FAQItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78454A8128C7141BCDBC64D /* FAQItem.swift */; };
+		0CBA354C83F5668EE7DFCF0A /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6EAB6CE758C5333FAFE218 /* University.swift */; };
+		09714B20460B91FD5CB9FF5F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B60618DEA3219A3F63B912 /* Country.swift */; };
+		91D3698CB1140AA83BAB6B28 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E086C9B62B695AF11A064 /* MockData.swift */; };
+		76BEE4F2C1EF0ABF6F44273E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6A6359C5A8993333BCBC6D /* HomeViewModel.swift */; };
+		63DC08D2AEC7A2AAEE174095 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D87D4B37735B404AC851F3 /* CountryListViewModel.swift */; };
+		62C18396A4E567AFF42142F7 /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F245C63BE4C73337A242AF /* CountryDetailViewModel.swift */; };
+		1D49529F3E571860E5995840 /* UniversityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886EDA16AE9A7CF87A767961 /* UniversityListViewModel.swift */; };
+		0D15A57F8A8F142D89690989 /* UniversityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A1E2C0AA5D02E906C4FBD0 /* UniversityDetailViewModel.swift */; };
+		A59935247881D3FE49E9F34E /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106EDD96BECCE235285EA219 /* ContactViewModel.swift */; };
+		D02EDA36071ECDA2808AC846 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F35CA658D66F20C0294558 /* RootTabView.swift */; };
+		8BB36D69FE1A62A403811D90 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63552CDE3E3071EA7F490008 /* SplashView.swift */; };
+		CB7845C1249E732E5E3DE868 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463955D2A447D4698505205 /* HomeView.swift */; };
+		6B17D249A1E931B08CA895E6 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2B56EA8383754D10DF731 /* CountryListView.swift */; };
+		55889ED29D7E674CE25CBFE2 /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069ED1D5842C77B153A5769 /* CountryDetailView.swift */; };
+		29C425C43AF67140E3E01677 /* UniversityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB866ECD5D77FFBB6CEAD62 /* UniversityListView.swift */; };
+		81CD4442F390D5632BDFFA74 /* UniversityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC49DBD7F47B5466A954B45 /* UniversityDetailView.swift */; };
+		5F5D3C922092E000A0B34D37 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC1AAF8B8F00AE5EFA5E3CF /* AboutView.swift */; };
+		5B03ECAD75C65D47888FBD8C /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ABB38221D1B289D9BD286F /* ContactView.swift */; };
+		7A1FEA57287BA2E42D73A203 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757BB07CED0B35667C0F0555 /* SectionHeader.swift */; };
+		8D0B8A8B7D4A71864A6C036F /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C03B2ABF539CD62983C2CB /* PrimaryButton.swift */; };
+		777D3583713E678DA096B570 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E12D1E558756D274479581 /* Badge.swift */; };
+		1E05135AEFA64549C879292D /* StatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C7C35BD114C89990F9F587 /* StatCard.swift */; };
+		3E23FCD1C53E5D5BE62CDE1E /* UniversityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3E1F1EB37FA61851A2E9A7 /* UniversityCard.swift */; };
+		3502235180E31F26A9010445 /* DisclaimerFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34DFC201D78AA87252840DC /* DisclaimerFooter.swift */; };
+		5B80C174B8632248FE334A83 /* Color+Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7E0D2D5717986279F0A293 /* Color+Brand.swift */; };
+		C046F5C1BD1C0F5B26705CA1 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A1AA392BD2D6C23C5E8955 /* Typography.swift */; };
+		6D8D5846EB6EDBEB5DA7E00A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6F3C4741C65F5B3BD9E007 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93D74A7CC467D7D68DEF632F /* MedicullumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicullumApp.swift; sourceTree = "<group>"; };
+		D78454A8128C7141BCDBC64D /* FAQItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQItem.swift; sourceTree = "<group>"; };
+		EA6EAB6CE758C5333FAFE218 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		64B60618DEA3219A3F63B912 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		8E0E086C9B62B695AF11A064 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		8C6A6359C5A8993333BCBC6D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C2D87D4B37735B404AC851F3 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+		C9F245C63BE4C73337A242AF /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
+		886EDA16AE9A7CF87A767961 /* UniversityListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListViewModel.swift; sourceTree = "<group>"; };
+		27A1E2C0AA5D02E906C4FBD0 /* UniversityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailViewModel.swift; sourceTree = "<group>"; };
+		106EDD96BECCE235285EA219 /* ContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		55F35CA658D66F20C0294558 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		63552CDE3E3071EA7F490008 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		3463955D2A447D4698505205 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F5D2B56EA8383754D10DF731 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
+		4069ED1D5842C77B153A5769 /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
+		2EB866ECD5D77FFBB6CEAD62 /* UniversityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListView.swift; sourceTree = "<group>"; };
+		4AC49DBD7F47B5466A954B45 /* UniversityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailView.swift; sourceTree = "<group>"; };
+		1BC1AAF8B8F00AE5EFA5E3CF /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		F3ABB38221D1B289D9BD286F /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		757BB07CED0B35667C0F0555 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		E1C03B2ABF539CD62983C2CB /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		B4E12D1E558756D274479581 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		E0C7C35BD114C89990F9F587 /* StatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCard.swift; sourceTree = "<group>"; };
+		2B3E1F1EB37FA61851A2E9A7 /* UniversityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCard.swift; sourceTree = "<group>"; };
+		D34DFC201D78AA87252840DC /* DisclaimerFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerFooter.swift; sourceTree = "<group>"; };
+		BC7E0D2D5717986279F0A293 /* Color+Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color+Brand.swift; sourceTree = "<group>"; };
+		06A1AA392BD2D6C23C5E8955 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		128CD5CF693404B5098E4E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A6F3C4741C65F5B3BD9E007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B81355F71DB70F863208E37C /* Medicullum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medicullum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D850433A59968F6062D1002E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D6A98BCEA50071D1E24DA439 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55F35CA658D66F20C0294558 /* RootTabView.swift */,
+				36F7971954048F17B6A21BEC /* Universities */,
+				D4AEC438E1522C7301A02506 /* Home */,
+				B52C7C010F89F36642AE0073 /* About */,
+				3EF765F330ED195E470987F8 /* Countries */,
+				B2B26E89DE2843145D286F4D /* Components */,
+				68135EC46241C352C6FB97DD /* Splash */,
+				B74AED0EDDDD0542D88F8C26 /* Contact */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4DE5B7E899ECAE3E6821395 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				BC7E0D2D5717986279F0A293 /* Color+Brand.swift */,
+				06A1AA392BD2D6C23C5E8955 /* Typography.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		34937C698918CC7F7E4BAB0E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8C6A6359C5A8993333BCBC6D /* HomeViewModel.swift */,
+				C2D87D4B37735B404AC851F3 /* CountryListViewModel.swift */,
+				C9F245C63BE4C73337A242AF /* CountryDetailViewModel.swift */,
+				886EDA16AE9A7CF87A767961 /* UniversityListViewModel.swift */,
+				27A1E2C0AA5D02E906C4FBD0 /* UniversityDetailViewModel.swift */,
+				106EDD96BECCE235285EA219 /* ContactViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		81EB8B4BCF81190869D21E1B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8E0E086C9B62B695AF11A064 /* MockData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		812ADFA1E1658E44C6CCCF9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D78454A8128C7141BCDBC64D /* FAQItem.swift */,
+				EA6EAB6CE758C5333FAFE218 /* University.swift */,
+				64B60618DEA3219A3F63B912 /* Country.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36F7971954048F17B6A21BEC /* Universities */ = {
+			isa = PBXGroup;
+			children = (
+				2EB866ECD5D77FFBB6CEAD62 /* UniversityListView.swift */,
+				4AC49DBD7F47B5466A954B45 /* UniversityDetailView.swift */,
+			);
+			path = Universities;
+			sourceTree = "<group>";
+		};
+		D4AEC438E1522C7301A02506 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3463955D2A447D4698505205 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B52C7C010F89F36642AE0073 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				1BC1AAF8B8F00AE5EFA5E3CF /* AboutView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		3EF765F330ED195E470987F8 /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				F5D2B56EA8383754D10DF731 /* CountryListView.swift */,
+				4069ED1D5842C77B153A5769 /* CountryDetailView.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		B2B26E89DE2843145D286F4D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				757BB07CED0B35667C0F0555 /* SectionHeader.swift */,
+				E1C03B2ABF539CD62983C2CB /* PrimaryButton.swift */,
+				B4E12D1E558756D274479581 /* Badge.swift */,
+				E0C7C35BD114C89990F9F587 /* StatCard.swift */,
+				2B3E1F1EB37FA61851A2E9A7 /* UniversityCard.swift */,
+				D34DFC201D78AA87252840DC /* DisclaimerFooter.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		68135EC46241C352C6FB97DD /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				63552CDE3E3071EA7F490008 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B74AED0EDDDD0542D88F8C26 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				F3ABB38221D1B289D9BD286F /* ContactView.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		F6637573461FB82D2BA75383 /* Medicullum */ = {
+			isa = PBXGroup;
+			children = (
+				93D74A7CC467D7D68DEF632F /* MedicullumApp.swift */,
+				D6A98BCEA50071D1E24DA439 /* Views */,
+				D4DE5B7E899ECAE3E6821395 /* Theme */,
+				34937C698918CC7F7E4BAB0E /* ViewModels */,
+				81EB8B4BCF81190869D21E1B /* Data */,
+				812ADFA1E1658E44C6CCCF9C /* Models */,
+				0851491540DE684BEACAE46C /* Resources */,
+				128CD5CF693404B5098E4E0F /* Info.plist */,
+			);
+			path = Medicullum;
+			sourceTree = "<group>";
+		};
+		0851491540DE684BEACAE46C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A6F3C4741C65F5B3BD9E007 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A7853440F257A46F6CC9ABA2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B81355F71DB70F863208E37C /* Medicullum.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8675B2A30B4408E16967FF7F = {
+			isa = PBXGroup;
+			children = (
+				F6637573461FB82D2BA75383 /* Medicullum */,
+				A7853440F257A46F6CC9ABA2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48ABED3F4EF4527260EBC634 /* Medicullum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D59FA8797058310BF16040A4 /* Build configuration list for PBXNativeTarget "Medicullum" */;
+			buildPhases = (
+				503EC6C93D0BF0E88D04DA1B /* Sources */,
+				D850433A59968F6062D1002E /* Frameworks */,
+				30AE00AD437441FD3CDACF2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Medicullum;
+			productName = Medicullum;
+			productReference = B81355F71DB70F863208E37C /* Medicullum.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30DCBACC4E9875E16CF52AB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					48ABED3F4EF4527260EBC634 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = F3D4F298554CA4199A3B1208 /* Build configuration list for PBXProject "Medicullum" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8675B2A30B4408E16967FF7F;
+			productRefGroup = A7853440F257A46F6CC9ABA2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48ABED3F4EF4527260EBC634 /* Medicullum */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30AE00AD437441FD3CDACF2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D8D5846EB6EDBEB5DA7E00A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		503EC6C93D0BF0E88D04DA1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00B68528C63725CA9ECCB683 /* MedicullumApp.swift in Sources */,
+				14F7A52EA7237DD2D27EAAFC /* FAQItem.swift in Sources */,
+				0CBA354C83F5668EE7DFCF0A /* University.swift in Sources */,
+				09714B20460B91FD5CB9FF5F /* Country.swift in Sources */,
+				91D3698CB1140AA83BAB6B28 /* MockData.swift in Sources */,
+				76BEE4F2C1EF0ABF6F44273E /* HomeViewModel.swift in Sources */,
+				63DC08D2AEC7A2AAEE174095 /* CountryListViewModel.swift in Sources */,
+				62C18396A4E567AFF42142F7 /* CountryDetailViewModel.swift in Sources */,
+				1D49529F3E571860E5995840 /* UniversityListViewModel.swift in Sources */,
+				0D15A57F8A8F142D89690989 /* UniversityDetailViewModel.swift in Sources */,
+				A59935247881D3FE49E9F34E /* ContactViewModel.swift in Sources */,
+				D02EDA36071ECDA2808AC846 /* RootTabView.swift in Sources */,
+				8BB36D69FE1A62A403811D90 /* SplashView.swift in Sources */,
+				CB7845C1249E732E5E3DE868 /* HomeView.swift in Sources */,
+				6B17D249A1E931B08CA895E6 /* CountryListView.swift in Sources */,
+				55889ED29D7E674CE25CBFE2 /* CountryDetailView.swift in Sources */,
+				29C425C43AF67140E3E01677 /* UniversityListView.swift in Sources */,
+				81CD4442F390D5632BDFFA74 /* UniversityDetailView.swift in Sources */,
+				5F5D3C922092E000A0B34D37 /* AboutView.swift in Sources */,
+				5B03ECAD75C65D47888FBD8C /* ContactView.swift in Sources */,
+				7A1FEA57287BA2E42D73A203 /* SectionHeader.swift in Sources */,
+				8D0B8A8B7D4A71864A6C036F /* PrimaryButton.swift in Sources */,
+				777D3583713E678DA096B570 /* Badge.swift in Sources */,
+				1E05135AEFA64549C879292D /* StatCard.swift in Sources */,
+				3E23FCD1C53E5D5BE62CDE1E /* UniversityCard.swift in Sources */,
+				3502235180E31F26A9010445 /* DisclaimerFooter.swift in Sources */,
+				5B80C174B8632248FE334A83 /* Color+Brand.swift in Sources */,
+				C046F5C1BD1C0F5B26705CA1 /* Typography.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A896AE520EA6E3419493A445 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D98E923D60817A3A4075A2DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD290F7D5C695E580A4BDCE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Medicullum/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_CFBundleDisplayName = Medicullum;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medicullum.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B42B2E549FB9F7789817474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Medicullum/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_CFBundleDisplayName = Medicullum;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.medicullum.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3D4F298554CA4199A3B1208 /* Build configuration list for PBXProject "Medicullum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A896AE520EA6E3419493A445 /* Debug */,
+				D98E923D60817A3A4075A2DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D59FA8797058310BF16040A4 /* Build configuration list for PBXNativeTarget "Medicullum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD290F7D5C695E580A4BDCE5 /* Debug */,
+				8B42B2E549FB9F7789817474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30DCBACC4E9875E16CF52AB1 /* Project object */;
+}
